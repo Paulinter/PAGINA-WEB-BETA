@@ -3,52 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulinter | Mis Redes</title>
-    <meta name="description" content="Hola, soy Paulinter 👋 Aquí están todos mis links." />
+    <title>Paulo César | Software Engineer & Web Developer</title>
+    <meta name="description" content="Portafolio profesional de Paulo César (Paulinter). Estudiante de Ingeniería de Software especializándose en Desarrollo Web, C++ y Robótica con Arduino." />
 
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-512.png" />
-    <meta name="msapplication-TileImage" content="favicon-512.png" />
 
+    <!-- Open Graph / Meta Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pagina-web-paulinter.onrender.com/" />
-    <meta property="og:title" content="Paulinter | Mis Redes" />
-    <meta property="og:description" content="Hola, soy Paulinter 👋 Aquí están todos mis links." />
-    <meta property="og:image" content="https://pagina-web-paulinter.onrender.com/paulinter.jpg" />
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
+    <meta property="og:url" content="https://github.com/Paulinter/PAGINA-WEB-BETA" />
+    <meta property="og:title" content="Paulo César | Software Engineer Portfolio" />
+    <meta property="og:description" content="Estudiante de Ingeniería de Software apasionado por el Desarrollo Web, C++ y Robótica." />
+    <meta property="og:image" content="favicon-512.png" />
     <meta property="og:locale" content="es_PE" />
     <meta property="og:site_name" content="Paulinter" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://pagina-web-paulinter.onrender.com/" />
-    <meta name="twitter:title" content="Paulinter | Mis Redes" />
-    <meta name="twitter:description" content="Hola, soy Paulinter 👋 Aquí están todos mis links." />
-    <meta name="twitter:image" content="https://pagina-web-paulinter.onrender.com/paulinter.jpg" />
-
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">&lt;Paulo<span>/Dev</span>&gt;</a>
-            <nav class="nav-links" id="nav-links">
-                <a href="#inicio" class="active">Inicio</a>
-                <a href="#sobre-mi">Sobre Mí</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto" class="btn-primary-sm">Contacto</a>
-            </nav>
+            <a href="#" class="logo">
+                <span class="logo-slash">&lt;</span>Paulo<span>/Dev</span><span class="logo-slash">&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#contacto" class="btn-primary-sm">Contacto</a></li>
+            </ul>
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -59,38 +56,53 @@
     <section id="inicio" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <div class="badge">
-                    <span class="pulse"></span> Disponible para proyectos
+                <div class="badge-wrapper">
+                    <div class="badge">
+                        <span class="pulse"></span> Disponible para nuevos proyectos & colaboraciones
+                    </div>
                 </div>
                 <h1>Hola, soy <span class="gradient-text">Paulo César</span></h1>
-                <p class="subtitle">Estudiante de Ingeniería de Software apasionado por el desarrollo web, programación de sistemas y robótica con Arduino.</p>
+                <p class="subtitle">
+                    Estudiante de <strong>Ingeniería de Software</strong> apasionado por el desarrollo web moderno, arquitectura de sistemas en C++ y proyectos interactivos de robótica con Arduino.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#proyectos" class="btn btn-primary"><i class="fa-solid fa-code"></i> Ver Proyectos</a>
-                    <a href="#contacto" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Contactarme</a>
+                    <a href="#proyectos" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket"></i> Explorar Proyectos
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <i class="fa-solid fa-paper-plane"></i> Contactar
+                    </a>
                 </div>
                 <div class="social-links">
-                    <a href="https://youtube.com/@paulinter0909" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://wa.me/51944662808" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/pauloxd0909/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/Paulinter" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://github.com/Paulinter" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtube.com/@paulinter0909" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/51944662808" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/pauloxd0909/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="hero-card">
-                <div class="code-editor">
-                    <div class="editor-header">
+
+            <!-- Terminal CLI Widget -->
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
                         <span class="dot red"></span>
                         <span class="dot yellow"></span>
                         <span class="dot green"></span>
-                        <span class="filename">developer.js</span>
                     </div>
-                    <div class="editor-body">
-                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-    <span class="property">name</span>: <span class="string">'Paulo C.'</span>,
-    <span class="property">role</span>: <span class="string">'Software Engineering Student'</span>,
-    <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'C++'</span>, <span class="string">'Python'</span>, <span class="string">'Arduino'</span>, <span class="string">'HTML/CSS'</span>],
-    <span class="property">passions</span>: [<span class="string">'Web Dev'</span>, <span class="string">'Algorithms'</span>, <span class="string">'Electronics'</span>],
-    <span class="property">status</span>: <span class="string">'Always learning & building 🚀'</span>
-};</code></pre>
+                    <div class="terminal-title">
+                        <i class="fa-solid fa-terminal"></i> paulinter-cli v2.0
+                    </div>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line welcome-msg">
+                        <span class="terminal-output">Bienvenido a la consola interactiva de Paulo César! 🚀</span>
+                    </div>
+                    <div class="terminal-line welcome-msg">
+                        <span class="terminal-output">Escribe <span class="highlight">help</span> para ver los comandos disponibles.</span>
+                    </div>
+                    <div class="terminal-input-row">
+                        <span class="terminal-prompt">guest@paulinter:~$</span>
+                        <input type="text" id="terminal-input" class="terminal-input" placeholder="Escribe 'help' y presiona Enter..." autocomplete="off" spellcheck="false">
                     </div>
                 </div>
             </div>
@@ -100,42 +112,50 @@
     <!-- Sobre Mí -->
     <section id="sobre-mi" class="section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-user"></i> Sobre Mí</h2>
-            <div class="grid grid-2">
+            <div class="section-header">
+                <span class="section-subtitle">Conóceme</span>
+                <h2 class="section-title">Sobre Mí & Enfoque</h2>
+            </div>
+            <div class="grid-2">
                 <div class="about-text">
-                    <p>Soy un estudiante entusiasta de <strong>Ingeniería de Software</strong> enfocado en crear soluciones tecnológicas eficientes, elegantes y bien estructuradas.</p>
-                    <p>Mi enfoque abarca desde la lógica de programación pura y algoritmos estructurados hasta el desarrollo de interfaces web atractivas y proyectos de interacción hardware-software utilizando microcontroladores.</p>
+                    <p>
+                        Soy un apasionado estudiante de <strong>Ingeniería de Software</strong> enfocado en construir software estructurado, limpio y de alto rendimiento. Mi camino combina la disciplina del pensamiento algorítmico con la creatividad del desarrollo de interfaces web atractivas.
+                    </p>
+                    <p>
+                        Además del desarrollo web, me entusiasma la integración entre software y hardware, creando proyectos mecatrónicos con microcontroladores <strong>Arduino</strong> y código optimizado en <strong>C++</strong>.
+                    </p>
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <h3>+10</h3>
-                            <p>Proyectos Creados</p>
+                            <h3>+12</h3>
+                            <p>Proyectos Desarrollados</p>
                         </div>
                         <div class="stat-card">
                             <h3>100%</h3>
-                            <p>Compromiso</p>
+                            <p>Compromiso y Calidad</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="about-highlights">
-                    <div class="highlight-item">
-                        <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
-                        <div>
-                            <h4>Desarrollo Web</h4>
-                            <p>Construcción de sitios modernos, adaptables a cualquier dispositivo y enfocados en la experiencia de usuario.</p>
+                    <div class="highlight-card">
+                        <div class="icon-box"><i class="fa-solid fa-code"></i></div>
+                        <div class="highlight-info">
+                            <h4>Desarrollo Web Frontend</h4>
+                            <p>Construcción de interfaces modernas, accesibles y dinámicas orientadas a la mejor experiencia de usuario.</p>
                         </div>
                     </div>
-                    <div class="highlight-item">
+                    <div class="highlight-card">
                         <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                        <div>
-                            <h4>Sistemas & Robótica</h4>
-                            <p>Experiencia en programación C++ y proyectos interactivos con placas Arduino y sensores.</p>
+                        <div class="highlight-info">
+                            <h4>Programación C++ & Robótica</h4>
+                            <p>Desarrollo de lógica para sistemas embebidos, sensores y actuadores con Arduino.</p>
                         </div>
                     </div>
-                    <div class="highlight-item">
+                    <div class="highlight-card">
                         <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
-                        <div>
-                            <h4>Resolución de Problemas</h4>
-                            <p>Sólida base lógica y matemática orientada a la optimización de código y algoritmos.</p>
+                        <div class="highlight-info">
+                            <h4>Pensamiento Algorítmico</h4>
+                            <p>Resolución eficiente de problemas mediante estructuras de datos y análisis de complejidad.</p>
                         </div>
                     </div>
                 </div>
@@ -144,39 +164,90 @@
     </section>
 
     <!-- Habilidades -->
-    <section id="habilidades" class="section bg-alt">
+    <section id="habilidades" class="section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Mis Habilidades</h2>
+            <div class="section-header">
+                <span class="section-subtitle">Tech Stack</span>
+                <h2 class="section-title">Mis Habilidades Técnicas</h2>
+            </div>
+
             <div class="skills-grid">
+                <!-- Skill 1 -->
                 <div class="skill-card">
-                    <i class="fa-brands fa-html5 skill-icon html"></i>
-                    <h3>HTML5</h3>
-                    <p>Estructura semántica y accesible.</p>
+                    <div class="skill-header">
+                        <i class="fa-brands fa-html5 skill-icon html"></i>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <h3>HTML5 Semántico</h3>
+                    <p>Estructura web semántica, estándares W3C y optimización SEO.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="95%"></div>
+                    </div>
                 </div>
+
+                <!-- Skill 2 -->
                 <div class="skill-card">
-                    <i class="fa-brands fa-css3-alt skill-icon css"></i>
-                    <h3>CSS3 & Flexbox/Grid</h3>
-                    <p>Diseño responsive y moderno.</p>
+                    <div class="skill-header">
+                        <i class="fa-brands fa-css3-alt skill-icon css"></i>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <h3>CSS3 & Layouts</h3>
+                    <p>Flexbox, Grid Layout, animaciones modernas y diseño responsive.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="90%"></div>
+                    </div>
                 </div>
+
+                <!-- Skill 3 -->
                 <div class="skill-card">
-                    <i class="fa-brands fa-js skill-icon js"></i>
-                    <h3>JavaScript</h3>
-                    <p>Lógica interactiva y dinamismo.</p>
+                    <div class="skill-header">
+                        <i class="fa-brands fa-js skill-icon js"></i>
+                        <span class="skill-level">Intermedio - Avanzado</span>
+                    </div>
+                    <h3>JavaScript (ES6+)</h3>
+                    <p>Manipulación DOM, async/await, interacciones y consumo de APIs.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="85%"></div>
+                    </div>
                 </div>
+
+                <!-- Skill 4 -->
                 <div class="skill-card">
-                    <i class="fa-solid fa-code skill-icon cpp"></i>
+                    <div class="skill-header">
+                        <i class="fa-solid fa-code skill-icon cpp"></i>
+                        <span class="skill-level">Intermedio</span>
+                    </div>
                     <h3>C++ & Algoritmos</h3>
-                    <p>Estructura de datos y lógica.</p>
+                    <p>Programación orientada a objetos, punteros y estructuras lógicas.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="80%"></div>
+                    </div>
                 </div>
+
+                <!-- Skill 5 -->
                 <div class="skill-card">
-                    <i class="fa-solid fa-microchip skill-icon arduino"></i>
-                    <h3>Arduino & Hardware</h3>
-                    <p>Electrónica y prototipado.</p>
+                    <div class="skill-header">
+                        <i class="fa-solid fa-microchip skill-icon arduino"></i>
+                        <span class="skill-level">Intermedio</span>
+                    </div>
+                    <h3>Arduino & Embebidos</h3>
+                    <p>Integración de sensores, servos, pantallas LCD y automatización.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="85%"></div>
+                    </div>
                 </div>
+
+                <!-- Skill 6 -->
                 <div class="skill-card">
-                    <i class="fa-brands fa-github skill-icon git"></i>
-                    <h3>Git & GitHub</h3>
-                    <p>Control de versiones y deploy.</p>
+                    <div class="skill-header">
+                        <i class="fa-brands fa-github skill-icon git"></i>
+                        <span class="skill-level">Avanzado</span>
+                    </div>
+                    <h3>Git & GitHub Pages</h3>
+                    <p>Control de versiones, ramas, despliegue continuo y trabajo colaborativo.</p>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress-fill" data-level="90%"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,58 +256,123 @@
     <!-- Proyectos -->
     <section id="proyectos" class="section">
         <div class="container">
-            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Proyectos Destacados</h2>
+            <div class="section-header">
+                <span class="section-subtitle">Portafolio</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+                <button class="filter-btn" data-filter="hardware">C++ & Robótica</button>
+                <button class="filter-btn" data-filter="logic">Algoritmos</button>
+            </div>
+
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-folder-open folder-icon"></i>
-                        <div class="project-links">
-                            <a href="https://github.com/Paulinter/githubpagetest" target="_blank" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
-                            <a href="#" aria-label="Live Demo"><i class="fa-solid fa-up-right-from-square"></i></a>
+                <!-- Project 1 -->
+                <div class="project-card" data-id="github-page-test" data-category="web">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter/PAGINA-WEB-BETA" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Portafolio Web (PAGINA-WEB-BETA)</h3>
+                        <p>Plataforma web personal moderna con diseño Cyberpunk Glassmorphic, terminal interactiva en vivo y optimización para GitHub Pages.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3 Glassmorphism</span>
+                            <span>JavaScript ES6+</span>
+                            <span>CLI Engine</span>
                         </div>
                     </div>
-                    <h3>GitHub Page Test</h3>
-                    <p>Página de pruebas e inicio de portafolio web alojado de forma gratuita mediante GitHub Pages con integración continua.</p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>GitHub Pages</span>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-id="arduino-control" data-category="hardware">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-microchip folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Control de Sistema con Arduino</h3>
+                        <p>Sistema mecatrónico interactivo en C++ para lectura telemétrica de sensores de ultrasonido y temperatura con actuadores servo.</p>
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>Arduino UNO</span>
+                            <span>Sensores & LCD</span>
+                        </div>
+                    </div>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-id="algoritmo-simulador" data-category="logic">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-diagram-project folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Simulador Algorítmico</h3>
+                        <p>Módulo de simulación lógica paso a paso para la resolución de estructuras condicionales y algoritmos de ordenamiento.</p>
+                        <div class="project-tags">
+                            <span>Pseudocódigo</span>
+                            <span>PSeInt</span>
+                            <span>Lógica Algorítmica</span>
+                        </div>
+                    </div>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trayectoria -->
+    <section id="trayectoria" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Experiencia & Educación</span>
+                <h2 class="section-title">Mi Trayectoria</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - Presente</span>
+                        <h4>Estudios en Ingeniería de Software</h4>
+                        <p>Formación académica orientada a algoritmos, arquitectura de software, bases de datos y desarrollo de sistemas.</p>
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-folder-open folder-icon"></i>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3>Control de Sistema con Arduino</h3>
-                    <p>Sistema interactivo desarrollado con C++ y Arduino para la lectura de sensores e integración con actuadores.</p>
-                    <div class="project-tags">
-                        <span>C++</span>
-                        <span>Arduino</span>
-                        <span>Electrónica</span>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h4>Proyectos Robóticos con Arduino & C++</h4>
+                        <p>Construcción e integración de prototipos interactivos con sensores telemétricos y automatización.</p>
                     </div>
                 </div>
 
-                <!-- Proyecto 3 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-folder-open folder-icon"></i>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub Repo"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3>Simulador Algorítmico</h3>
-                    <p>Módulo interactivo de resolución de problemas lógicos y estructuras algorítmicas avanzadas.</p>
-                    <div class="project-tags">
-                        <span>PSeInt</span>
-                        <span>Lógica</span>
-                        <span>Algoritmos</span>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026</span>
+                        <h4>Despliegue de Portafolio en GitHub Pages</h4>
+                        <p>Creación de la versión BETA optimizada del sitio web personal lista para producción y libre de dependencias.</p>
                     </div>
                 </div>
             </div>
@@ -244,12 +380,52 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="section bg-alt">
+    <section id="contacto" class="section">
         <div class="container">
-            <div class="contact-box">
-                <h2>¿Tienes un proyecto o consulta en mente?</h2>
-                <p>Estoy siempre abierto a nuevas oportunidades, colaboraciones o consultas técnicas.</p>
-                <a href="mailto:ejemplo@email.com" class="btn btn-primary btn-lg"><i class="fa-solid fa-envelope"></i> Enviar Mensaje</a>
+            <div class="contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>¿Tienes una idea o proyecto en mente?</h3>
+                        <p>Estoy siempre abierto a escuchar nuevas propuestas de proyectos, colaborar en código open-source o responder consultas técnicas.</p>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <div class="contact-detail">
+                                <h5>WhatsApp Directo</h5>
+                                <a href="https://wa.me/51944662808" target="_blank" rel="noopener">+51 944 662 808</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-detail">
+                                <h5>Correo Electrónico</h5>
+                                <button class="copy-email-btn" id="copy-email-btn">
+                                    <i class="fa-solid fa-copy"></i> Copiar Correo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" class="form-control" placeholder="Tu nombre..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" class="form-control" placeholder="tu@email.com..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" class="form-control" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -257,13 +433,48 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2026 Paulo C. — Desarrollado con HTML, CSS y JS. Listo para GitHub Pages.</p>
-            <div class="footer-links">
-                <a href="https://github.com/Paulinter" target="_blank">GitHub</a>
+            <div class="footer-text">
+                <p>&copy; 2026 Paulo César (Paulinter) — Diseñado & Desarrollado con HTML5, CSS3 y JS Nativo. Listo para GitHub Pages.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://youtube.com/@paulinter0909" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Project Details Modal -->
+    <div class="modal-overlay" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <h3 id="modal-title">Título del Proyecto</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-body-text">Descripción detallada del proyecto...</p>
+                <ul class="modal-features" id="modal-features-list">
+                    <!-- Features injected dynamically -->
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modal-github-link" target="_blank" class="btn btn-primary">
+                    <i class="fa-brands fa-github"></i> Ver Código en GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>

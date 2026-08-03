@@ -1,16 +1,52 @@
-# GitHub Page Test - Portafolio Web Mejorado
+# 🚀 Portafolio Web Profesional - PAGINA-WEB-BETA
 
-Este repositorio contiene una versión optimizada y modernizada para **GitHub Pages**.
+Versión mejorada y optimizada para **GitHub Pages** del portafolio personal de **Paulo César (Paulinter)** — Estudiante de Ingeniería de Software.
 
-## 🚀 Mejoras Implementadas
-1. **Diseño Moderno & Dark Mode:** Paleta de colores cuidada con gradientes sutiles e interfaz profesional estilo developer.
-2. **Totalmente Responsive:** Adaptado para teléfonos móviles, tablets y ordenadores.
-3. **Optimización de Código:** Estructura limpia HTML5, CSS3 modular (Flexbox y Grid) y JavaScript nativo.
-4. **Iconos y Tipografía:** Integración de Font Awesome y Google Fonts (*Plus Jakarta Sans* y *Fira Code*).
-5. **Cero Dependencias Pesadas:** Carga ultra rápida, perfecto para publicar directamente en GitHub Pages.
+---
 
-## 🛠️ Cómo subirlo a GitHub Pages:
-1. Extrae el contenido del archivo ZIP.
-2. Copia los archivos (`index.html`, carpeta `css`, carpeta `js`, etc.) en la raíz de tu repositorio `githubpagetest`.
-3. Haz Commit y Push a la rama principal (`main` o `master`).
-4. En GitHub, ve a **Settings > Pages**, asegura que la fuente sea `Deploy from a branch` / `main` (raíz `/`) y guarda.
+## ✨ Características y Mejoras Implementadas
+
+1. **🎨 Estética Cyberpunk Glassmorphic Premium**:
+   - Fondo dinámico con malla de gradientes de luz ambientada.
+   - Componentes translúcidos con bordes neón interactivos y resplandor al pasar el cursor (`cursor-glow`).
+   - Tipografía moderna (*Plus Jakarta Sans* & *Fira Code*).
+
+2. **💻 Terminal CLI Interactiva (paulinter-cli v2.0)**:
+   - Consola embebida en la sección Hero donde los visitantes pueden ejecutar comandos reales:
+     - `help`, `about`, `skills`, `projects`, `contact`, `repo`, `sudo hire`, `clear`.
+
+3. **📂 Filtro Dinámico de Proyectos & Ventana Modal**:
+   - Filtrado por pestañas en tiempo real (*Todos*, *Desarrollo Web*, *C++ & Robótica*, *Algoritmos*).
+   - Modal interactivo desplegable al hacer clic en cualquier proyecto con detalles técnicos y características.
+
+4. **⚡ Animaciones de Scroll & Habilidades**:
+   - Barras de progreso animadas en la sección de habilidades (*Intersection Observer*).
+   - Indicador de scroll de navegación activa.
+   - Botón flotante para regresar arriba (*Back to Top*).
+
+5. **✉️ Contacto Interactivo & Toast Notifications**:
+   - Botón para copiar correo electrónico al portapapeles con notificación flotante (Toast).
+   - Integración directa con WhatsApp y redes sociales.
+   - Formulario de contacto responsive.
+
+6. **⚡ Carga Ultra Rápida (Cero Dependencias Pesadas)**:
+   - HTML5 semántico puro, CSS3 modular nativo y JavaScript (ES6+).
+   - Listo para desplegar instantáneamente en **GitHub Pages**.
+
+---
+
+## 🛠️ Guía de Publicación en GitHub Pages
+
+1. **Descarga y Descompresión**:
+   - Extrae los archivos de `PAGINA-WEB-BETA-MEJORADA.zip`.
+2. **Copia los Archivos**:
+   - Copia `index.html`, las carpetas `css/` y `js/`, así como las imágenes/favicons en la raíz de tu repositorio en GitHub.
+3. **Sube los Cambios**:
+   ```bash
+   git add .
+   git commit -m "Mejora total del portafolio: Glassmorphism, CLI Terminal y filtro de proyectos"
+   git push origin main
+   ```
+4. **Activa GitHub Pages**:
+   - En GitHub, ve a **Settings > Pages**.
+   - En **Source**, selecciona **Deploy from a branch** -> rama `main` (raíz `/`) y haz clic en **Save**.
