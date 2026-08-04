@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="indigo">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulo César | Software Engineer & Web Developer</title>
-    <meta name="description" content="Portafolio profesional de Paulo César (Paulinter). Estudiante de Ingeniería de Software especializándose en Desarrollo Web, C++ y Robótica con Arduino." />
+    <title>Paulo César | Software Engineer & Web Developer Portfolio</title>
+    <meta name="description" content="Portafolio profesional interactivo de Paulo César (Paulinter). Estudiante de Ingeniería de Software especializándose en Desarrollo Web Moderno, C++ y Robótica con Arduino." />
+    <meta name="keywords" content="Paulo Cesar, Paulinter, Ingeniería de Software, Desarrollo Web, C++, Arduino, JavaScript, Portafolio, HTML5, CSS3" />
+    <meta name="author" content="Paulo César (Paulinter)" />
+    <meta name="theme-color" content="#070a13" />
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
@@ -21,6 +24,32 @@
     <meta property="og:locale" content="es_PE" />
     <meta property="og:site_name" content="Paulinter" />
 
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Paulo César",
+      "alternateName": "Paulinter",
+      "jobTitle": "Estudiante de Ingeniería de Software & Developer",
+      "url": "https://github.com/Paulinter/PAGINA-WEB-BETA",
+      "sameAs": [
+        "https://github.com/Paulinter",
+        "https://youtube.com/@paulinter0909",
+        "https://www.instagram.com/pauloxd0909/",
+        "https://wa.me/51944662808"
+      ],
+      "knowsAbout": [
+        "Software Engineering",
+        "Web Development",
+        "C++",
+        "Arduino & Embedded Systems",
+        "Data Structures & Algorithms",
+        "JavaScript ES6+"
+      ]
+    }
+    </script>
+
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +64,7 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="#inicio" class="logo" aria-label="Inicio">
                 <span class="logo-slash">&lt;</span>Paulo<span>/Dev</span><span class="logo-slash">&gt;</span>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -43,33 +72,50 @@
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#playground">Playground</a></li>
                 <li><a href="#trayectoria">Trayectoria</a></li>
                 <li><a href="#contacto" class="btn-primary-sm">Contacto</a></li>
             </ul>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <button class="theme-toggle-btn" id="theme-toggle-btn" title="Cambiar Tema Visual (Indigo, Neon, Matrix, Sunset)">
+                    <i class="fa-solid fa-palette"></i>
+                    <span class="theme-badge" id="theme-name">Indigo</span>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <!-- Particle Canvas Background -->
+        <canvas id="hero-particles" class="hero-particles-canvas"></canvas>
+
         <div class="container hero-container">
-            <div class="hero-content">
-                <div class="badge-wrapper">
-                    <div class="badge">
-                        <span class="pulse"></span> Disponible para nuevos proyectos & colaboraciones
-                    </div>
+            <div class="reveal visible">
+                <div class="badge">
+                    <span class="pulse"></span> Disponible para proyectos &amp; colaboraciones
                 </div>
                 <h1>Hola, soy <span class="gradient-text">Paulo César</span></h1>
+                <div class="typing-container">
+                    <span class="typing-static">&gt;&nbsp;</span>
+                    <span id="typing-text" class="typing-text" aria-live="polite"></span>
+                    <span class="cursor-blink" aria-hidden="true">|</span>
+                </div>
                 <p class="subtitle">
-                    Estudiante de <strong>Ingeniería de Software</strong> apasionado por el desarrollo web moderno, arquitectura de sistemas en C++ y proyectos interactivos de robótica con Arduino.
+                    Estudiante de <strong>Ingeniería de Software</strong> apasionado por construir arquitecturas de código limpio, desarrollo web moderno, optimización en <strong>C++</strong> y mecatrónica interactiva con <strong>Arduino</strong>.
                 </p>
                 <div class="hero-buttons">
                     <a href="#proyectos" class="btn btn-primary">
                         <i class="fa-solid fa-rocket"></i> Explorar Proyectos
                     </a>
-                    <a href="#contacto" class="btn btn-secondary">
+                    <button class="btn btn-secondary" id="cv-modal-open-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Ver Resumen / CV
+                    </button>
+                    <a href="#contacto" class="btn btn-outline">
                         <i class="fa-solid fa-paper-plane"></i> Contactar
                     </a>
                 </div>
@@ -82,7 +128,7 @@
             </div>
 
             <!-- Terminal CLI Widget -->
-            <div class="terminal-card">
+            <div class="terminal-card reveal visible">
                 <div class="terminal-header">
                     <div class="terminal-controls">
                         <span class="dot red"></span>
@@ -90,19 +136,19 @@
                         <span class="dot green"></span>
                     </div>
                     <div class="terminal-title">
-                        <i class="fa-solid fa-terminal"></i> paulinter-cli v2.0
+                        <i class="fa-solid fa-terminal"></i> paulinter-cli v3.0 [Pro]
                     </div>
                 </div>
                 <div class="terminal-body" id="terminal-body">
                     <div class="terminal-line welcome-msg">
-                        <span class="terminal-output">Bienvenido a la consola interactiva de Paulo César! 🚀</span>
+                        <span class="terminal-output">¡Bienvenido a la consola interactiva de Paulo César! 🚀</span>
                     </div>
                     <div class="terminal-line welcome-msg">
-                        <span class="terminal-output">Escribe <span class="highlight">help</span> para ver los comandos disponibles.</span>
+                        <span class="terminal-output">Escribe <span class="highlight">help</span> para ver los comandos o prueba <span class="highlight">theme neon</span> o <span class="highlight">skills</span>.</span>
                     </div>
                     <div class="terminal-input-row">
                         <span class="terminal-prompt">guest@paulinter:~$</span>
-                        <input type="text" id="terminal-input" class="terminal-input" placeholder="Escribe 'help' y presiona Enter..." autocomplete="off" spellcheck="false">
+                        <input type="text" id="terminal-input" class="terminal-input" placeholder="Escribe 'help'..." autocomplete="off" spellcheck="false" aria-label="Consola de comandos">
                     </div>
                 </div>
             </div>
@@ -112,50 +158,58 @@
     <!-- Sobre Mí -->
     <section id="sobre-mi" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-subtitle">Conóceme</span>
-                <h2 class="section-title">Sobre Mí & Enfoque</h2>
+                <h2 class="section-title">Sobre Mí & Enfoque de Ingeniería</h2>
             </div>
             <div class="grid-2">
-                <div class="about-text">
+                <div class="about-text reveal">
                     <p>
-                        Soy un apasionado estudiante de <strong>Ingeniería de Software</strong> enfocado en construir software estructurado, limpio y de alto rendimiento. Mi camino combina la disciplina del pensamiento algorítmico con la creatividad del desarrollo de interfaces web atractivas.
+                        Como estudiante de <strong>Ingeniería de Software</strong>, me dedico a resolver problemas complejos mediante lógica rigurosa y código elegante. Mi formación abarca desde el diseño de software estructurado y patrones de arquitectura hasta el desarrollo de aplicaciones web responsivas.
                     </p>
                     <p>
-                        Además del desarrollo web, me entusiasma la integración entre software y hardware, creando proyectos mecatrónicos con microcontroladores <strong>Arduino</strong> y código optimizado en <strong>C++</strong>.
+                        Mi pasión va más allá de la pantalla: me fascina la intersección entre software y hardware. Mediante <strong>C++ y Arduino</strong>, diseño prototipos capaces de interactuar con el mundo físico utilizando sensores telemétricos, servos y sistemas embebidos.
                     </p>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <h3>+12</h3>
+                    <div class="stats-grid" data-stagger>
+                        <div class="stat-card reveal">
+                            <h3><span class="counter" data-target="15">+0</span></h3>
                             <p>Proyectos Desarrollados</p>
                         </div>
-                        <div class="stat-card">
+                        <div class="stat-card reveal">
+                            <h3><span class="counter" data-target="500">+0</span></h3>
+                            <p>Horas de Programación</p>
+                        </div>
+                        <div class="stat-card reveal">
+                            <h3><span class="counter" data-target="6">+0</span></h3>
+                            <p>Tecnologías Principales</p>
+                        </div>
+                        <div class="stat-card reveal">
                             <h3>100%</h3>
-                            <p>Compromiso y Calidad</p>
+                            <p>Compromiso & Calidad</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="about-highlights">
-                    <div class="highlight-card">
+                <div class="about-highlights" data-stagger>
+                    <div class="highlight-card reveal">
                         <div class="icon-box"><i class="fa-solid fa-code"></i></div>
                         <div class="highlight-info">
                             <h4>Desarrollo Web Frontend</h4>
-                            <p>Construcción de interfaces modernas, accesibles y dinámicas orientadas a la mejor experiencia de usuario.</p>
+                            <p>Interfaces web interactivas con HTML5 semántico, CSS3 avanzado (Glassmorphism, Grid/Flex) y JS nativo optimizado.</p>
                         </div>
                     </div>
-                    <div class="highlight-card">
+                    <div class="highlight-card reveal">
                         <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
                         <div class="highlight-info">
-                            <h4>Programación C++ & Robótica</h4>
-                            <p>Desarrollo de lógica para sistemas embebidos, sensores y actuadores con Arduino.</p>
+                            <h4>Programación C++ & Embebidos</h4>
+                            <p>Desarrollo de lógica para microcontroladores Arduino, manejo de interrupciones, sensores telemétricos y buses I2C.</p>
                         </div>
                     </div>
-                    <div class="highlight-card">
-                        <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                    <div class="highlight-card reveal">
+                        <div class="icon-box"><i class="fa-solid fa-diagram-project"></i></div>
                         <div class="highlight-info">
-                            <h4>Pensamiento Algorítmico</h4>
-                            <p>Resolución eficiente de problemas mediante estructuras de datos y análisis de complejidad.</p>
+                            <h4>Algoritmos & Estructuras de Datos</h4>
+                            <p>Análisis de complejidad algorítmica, arreglos, grafos, pilas, colas y pensamiento lógico para resolver problemas reales.</p>
                         </div>
                     </div>
                 </div>
@@ -166,89 +220,99 @@
     <!-- Habilidades -->
     <section id="habilidades" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-subtitle">Tech Stack</span>
-                <h2 class="section-title">Mis Habilidades Técnicas</h2>
+                <h2 class="section-title">Habilidades Técnicas & Herramientas</h2>
             </div>
 
-            <div class="skills-grid">
+            <div class="skills-grid" data-stagger>
                 <!-- Skill 1 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
                         <i class="fa-brands fa-html5 skill-icon html"></i>
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <h3>HTML5 Semántico</h3>
-                    <p>Estructura web semántica, estándares W3C y optimización SEO.</p>
+                    <p>Estructura web semántica, estándares W3C, accesibilidad (a11y) y optimización SEO.</p>
                     <div class="skill-progress-bar">
                         <div class="skill-progress-fill" data-level="95%"></div>
                     </div>
                 </div>
 
                 <!-- Skill 2 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
                         <i class="fa-brands fa-css3-alt skill-icon css"></i>
                         <span class="skill-level">Avanzado</span>
                     </div>
-                    <h3>CSS3 & Layouts</h3>
-                    <p>Flexbox, Grid Layout, animaciones modernas y diseño responsive.</p>
+                    <h3>CSS3 & Layouts Modernos</h3>
+                    <p>Flexbox, CSS Grid, Glassmorphism, animaciones CSS y diseño 100% responsive.</p>
                     <div class="skill-progress-bar">
-                        <div class="skill-progress-fill" data-level="90%"></div>
+                        <div class="skill-progress-fill" data-level="92%"></div>
                     </div>
                 </div>
 
                 <!-- Skill 3 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
                         <i class="fa-brands fa-js skill-icon js"></i>
-                        <span class="skill-level">Intermedio - Avanzado</span>
+                        <span class="skill-level">Avanzado</span>
                     </div>
-                    <h3>JavaScript (ES6+)</h3>
-                    <p>Manipulación DOM, async/await, interacciones y consumo de APIs.</p>
+                    <h3>JavaScript ES6+</h3>
+                    <p>DOM manipulation, async/await, Fetch API, módulos y lógica de estado cliente.</p>
                     <div class="skill-progress-bar">
-                        <div class="skill-progress-fill" data-level="85%"></div>
+                        <div class="skill-progress-fill" data-level="88%"></div>
                     </div>
                 </div>
 
                 <!-- Skill 4 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
                         <i class="fa-solid fa-code skill-icon cpp"></i>
-                        <span class="skill-level">Intermedio</span>
+                        <span class="skill-level">Intermedio - Avanzado</span>
                     </div>
-                    <h3>C++ & Algoritmos</h3>
-                    <p>Programación orientada a objetos, punteros y estructuras lógicas.</p>
+                    <h3>C++ & POO</h3>
+                    <p>Programación orientada a objetos, punteros, gestión de memoria y estructuras de datos.</p>
                     <div class="skill-progress-bar">
-                        <div class="skill-progress-fill" data-level="80%"></div>
+                        <div class="skill-progress-fill" data-level="82%"></div>
                     </div>
                 </div>
 
                 <!-- Skill 5 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
                         <i class="fa-solid fa-microchip skill-icon arduino"></i>
                         <span class="skill-level">Intermedio</span>
                     </div>
-                    <h3>Arduino & Embebidos</h3>
-                    <p>Integración de sensores, servos, pantallas LCD y automatización.</p>
+                    <h3>Arduino & Sistemas Embebidos</h3>
+                    <p>Integración de sensores ultrasónicos/DHT11, pantallas LCD I2C, servos y circuitos.</p>
                     <div class="skill-progress-bar">
                         <div class="skill-progress-fill" data-level="85%"></div>
                     </div>
                 </div>
 
                 <!-- Skill 6 -->
-                <div class="skill-card">
+                <div class="skill-card reveal">
                     <div class="skill-header">
-                        <i class="fa-brands fa-github skill-icon git"></i>
+                        <i class="fa-brands fa-git-alt skill-icon git"></i>
                         <span class="skill-level">Avanzado</span>
                     </div>
                     <h3>Git & GitHub Pages</h3>
-                    <p>Control de versiones, ramas, despliegue continuo y trabajo colaborativo.</p>
+                    <p>Control de versiones, flujo de trabajo por ramas, commits limpios y CI/CD en Pages.</p>
                     <div class="skill-progress-bar">
                         <div class="skill-progress-fill" data-level="90%"></div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Tech Badges -->
+            <div class="tech-badges-wrapper reveal" data-stagger>
+                <span class="badge-tag"><i class="fa-solid fa-terminal"></i> Terminal CLI</span>
+                <span class="badge-tag"><i class="fa-brands fa-python"></i> Python (Básico)</span>
+                <span class="badge-tag"><i class="fa-solid fa-database"></i> SQL / Bases de Datos</span>
+                <span class="badge-tag"><i class="fa-brands fa-linux"></i> Linux CLI</span>
+                <span class="badge-tag"><i class="fa-solid fa-gears"></i> Tinkercad / Proteus</span>
+                <span class="badge-tag"><i class="fa-solid fa-cube"></i> PSeInt & Pseudocódigo</span>
             </div>
         </div>
     </section>
@@ -256,36 +320,36 @@
     <!-- Proyectos -->
     <section id="proyectos" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <span class="section-subtitle">Portafolio</span>
                 <h2 class="section-title">Proyectos Destacados</h2>
             </div>
 
             <!-- Project Filters -->
-            <div class="project-filters">
+            <div class="project-filters reveal" role="group" aria-label="Filtrar proyectos">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Desarrollo Web</button>
                 <button class="filter-btn" data-filter="hardware">C++ & Robótica</button>
-                <button class="filter-btn" data-filter="logic">Algoritmos</button>
+                <button class="filter-btn" data-filter="logic">Algoritmos & Lógica</button>
             </div>
 
-            <div class="projects-grid">
+            <div class="projects-grid" data-stagger>
                 <!-- Project 1 -->
-                <div class="project-card" data-id="github-page-test" data-category="web">
+                <div class="project-card reveal" data-id="github-page-test" data-category="web">
                     <div>
                         <div class="project-card-top">
-                            <i class="fa-solid fa-folder-open folder-icon"></i>
+                            <i class="fa-solid fa-folder-open folder-icon" aria-hidden="true"></i>
                             <div class="project-links">
-                                <a href="https://github.com/Paulinter/PAGINA-WEB-BETA" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/Paulinter/PAGINA-WEB-BETA" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
-                        <h3>Portafolio Web (PAGINA-WEB-BETA)</h3>
-                        <p>Plataforma web personal moderna con diseño Cyberpunk Glassmorphic, terminal interactiva en vivo y optimización para GitHub Pages.</p>
+                        <h3>Portafolio Web Profesional</h3>
+                        <p>Plataforma web personal ulta interactiva con estética Glassmorphic, selector de temas en vivo, partículas interactivas y terminal CLI.</p>
                         <div class="project-tags">
                             <span>HTML5</span>
                             <span>CSS3 Glassmorphism</span>
                             <span>JavaScript ES6+</span>
-                            <span>CLI Engine</span>
+                            <span>Canvas</span>
                         </div>
                     </div>
                     <button class="project-details-btn">
@@ -294,20 +358,20 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card" data-id="arduino-control" data-category="hardware">
+                <div class="project-card reveal" data-id="arduino-control" data-category="hardware">
                     <div>
                         <div class="project-card-top">
-                            <i class="fa-solid fa-microchip folder-icon"></i>
+                            <i class="fa-solid fa-microchip folder-icon" aria-hidden="true"></i>
                             <div class="project-links">
-                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
-                        <h3>Control de Sistema con Arduino</h3>
-                        <p>Sistema mecatrónico interactivo en C++ para lectura telemétrica de sensores de ultrasonido y temperatura con actuadores servo.</p>
+                        <h3>Control de Sistema con Arduino & C++</h3>
+                        <p>Sistema mecatrónico interactivo desarrollado en C++ para lectura telemétrica de sensores de ultrasonido y temperatura con actuadores servo.</p>
                         <div class="project-tags">
                             <span>C++</span>
                             <span>Arduino UNO</span>
-                            <span>Sensores & LCD</span>
+                            <span>Sensores & LCD I2C</span>
                         </div>
                     </div>
                     <button class="project-details-btn">
@@ -316,20 +380,86 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card" data-id="algoritmo-simulador" data-category="logic">
+                <div class="project-card reveal" data-id="algoritmo-simulador" data-category="logic">
                     <div>
                         <div class="project-card-top">
-                            <i class="fa-solid fa-diagram-project folder-icon"></i>
+                            <i class="fa-solid fa-diagram-project folder-icon" aria-hidden="true"></i>
                             <div class="project-links">
-                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
-                        <h3>Simulador Algorítmico</h3>
-                        <p>Módulo de simulación lógica paso a paso para la resolución de estructuras condicionales y algoritmos de ordenamiento.</p>
+                        <h3>Simulador Algorítmico & Estructuras</h3>
+                        <p>Módulo de simulación lógica paso a paso para la resolución de estructuras condicionales, arreglos y algoritmos de ordenamiento.</p>
                         <div class="project-tags">
                             <span>Pseudocódigo</span>
                             <span>PSeInt</span>
-                            <span>Lógica Algorítmica</span>
+                            <span>C++ Lógico</span>
+                        </div>
+                    </div>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal" data-id="smart-home-dashboard" data-category="web hardware">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-house-signal folder-icon" aria-hidden="true"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Smart Home IoT Dashboard</h3>
+                        <p>Prototipo de panel de control web para monitorear estados de sensores telemétricos, conmutadores digitales y telemetría en tiempo real.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>IoT Integration</span>
+                            <span>CSS Grid</span>
+                        </div>
+                    </div>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal" data-id="motor-logico-cpp" data-category="logic">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-network-wired folder-icon" aria-hidden="true"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Motor Lógico en C++ (Buscador de Rutas)</h3>
+                        <p>Implementación en C++ puro utilizando estructuras de grafos y algoritmos de búsqueda para resolver rutas óptimas en mapas modulares.</p>
+                        <div class="project-tags">
+                            <span>C++ POO</span>
+                            <span>Grafos</span>
+                            <span>Algoritmos Búsqueda</span>
+                        </div>
+                    </div>
+                    <button class="project-details-btn">
+                        Ver Detalles <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal" data-id="bot-automation" data-category="web logic">
+                    <div>
+                        <div class="project-card-top">
+                            <i class="fa-solid fa-robot folder-icon" aria-hidden="true"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub Repository" title="Ver en GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Scripts de Automatización & CLI Tools</h3>
+                        <p>Colección de herramientas en línea de comandos para automatizar tareas repetitivas, parseo de datos y validaciones de código.</p>
+                        <div class="project-tags">
+                            <span>JavaScript CLI</span>
+                            <span>Node.js</span>
+                            <span>Automation</span>
                         </div>
                     </div>
                     <button class="project-details-btn">
@@ -340,39 +470,73 @@
         </div>
     </section>
 
+    <!-- Code Playground -->
+    <section id="playground" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Interactividad en Vivo</span>
+                <h2 class="section-title">Simulador & Playground de Código</h2>
+            </div>
+
+            <div class="playground-card reveal">
+                <div class="playground-header">
+                    <div class="playground-tabs">
+                        <button class="pg-tab active" data-snippet="cpp-sensor"><i class="fa-solid fa-microchip"></i> C++ Arduino Sensor</button>
+                        <button class="pg-tab" data-snippet="js-sort"><i class="fa-brands fa-js"></i> JS Bubble Sort Visual</button>
+                        <button class="pg-tab" data-snippet="cpp-poo"><i class="fa-solid fa-code"></i> C++ POO Clases</button>
+                    </div>
+                    <button id="run-code-btn" class="btn btn-primary-sm">
+                        <i class="fa-solid fa-play"></i> Ejecutar Lógica
+                    </button>
+                </div>
+
+                <div class="playground-body">
+                    <div class="code-editor-wrapper">
+                        <div class="editor-title"><i class="fa-solid fa-file-code"></i> Código de Ejemplo</div>
+                        <code id="code-display" class="code-display" aria-label="Código del ejemplo"></code>
+                    </div>
+                    <div class="code-output-wrapper">
+                        <div class="editor-title"><i class="fa-solid fa-terminal"></i> Salida de la Consola</div>
+                        <div id="code-output" class="code-output">Presiona "Ejecutar Lógica" para simular este código…</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trayectoria -->
     <section id="trayectoria" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Experiencia & Educación</span>
+            <div class="section-header reveal">
+                <span class="section-subtitle">Experiencia & Formación</span>
                 <h2 class="section-title">Mi Trayectoria</h2>
             </div>
 
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2024 - Presente</span>
                         <h4>Estudios en Ingeniería de Software</h4>
-                        <p>Formación académica orientada a algoritmos, arquitectura de software, bases de datos y desarrollo de sistemas.</p>
+                        <p>Formación académica intensiva en algoritmos, arquitectura de software, bases de datos relacionales, patrones de diseño y desarrollo orientado a objetos.</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2025</span>
-                        <h4>Proyectos Robóticos con Arduino & C++</h4>
-                        <p>Construcción e integración de prototipos interactivos con sensores telemétricos y automatización.</p>
+                        <h4>Proyectos de Mecatrónica con Arduino & C++</h4>
+                        <p>Construcción e integración de prototipos interactivos con sensores telemétricos, actuadores, motores y pantallas I2C programadas en C++.</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2026</span>
-                        <h4>Despliegue de Portafolio en GitHub Pages</h4>
-                        <p>Creación de la versión BETA optimizada del sitio web personal lista para producción y libre de dependencias.</p>
+                        <h4>Portafolio Pro & Despliegue en GitHub Pages</h4>
+                        <p>Lanzamiento de la plataforma web personal en vivo, totalmente optimizada, responsive, con simulador interactivo y cero dependencias.</p>
                     </div>
                 </div>
             </div>
@@ -382,11 +546,11 @@
     <!-- Contacto -->
     <section id="contacto" class="section">
         <div class="container">
-            <div class="contact-container">
+            <div class="contact-container reveal">
                 <div class="contact-grid">
                     <div class="contact-info">
                         <h3>¿Tienes una idea o proyecto en mente?</h3>
-                        <p>Estoy siempre abierto a escuchar nuevas propuestas de proyectos, colaborar en código open-source o responder consultas técnicas.</p>
+                        <p>Estoy siempre disponible para discutir nuevos proyectos, colaboraciones académicas, código open-source o resolver consultas técnicas.</p>
 
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
@@ -405,13 +569,26 @@
                                 </button>
                             </div>
                         </div>
+
+                        <!-- WhatsApp Fast Message Builder -->
+                        <div class="wa-builder">
+                            <h5><i class="fa-brands fa-whatsapp"></i> Generador de Mensaje Rápido</h5>
+                            <select id="wa-topic-select" class="form-control" aria-label="Tema del mensaje">
+                                <option value="Hola Paulo, vi tu portafolio y me gustaría proponerte una oportunidad de proyecto.">💼 Proyecto / Colaboración</option>
+                                <option value="Hola Paulo, me interesa tu trabajo en C++ y Arduino, me gustaría hacerte una consulta.">🤖 Consulta sobre Robótica / C++</option>
+                                <option value="Hola Paulo, vi tu portafolio web y quisiera saber más de tu trayectoria.">💬 Charla Profesional / Networking</option>
+                            </select>
+                            <button id="send-wa-btn" class="btn btn-secondary-sm">
+                                <i class="fa-brands fa-whatsapp"></i> Abrir Chat con este mensaje
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Formulario de Contacto -->
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" novalidate>
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" class="form-control" placeholder="Tu nombre..." required>
+                            <input type="text" id="name" class="form-control" placeholder="Tu nombre completo..." required>
                         </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>
@@ -419,7 +596,7 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Mensaje</label>
-                            <textarea id="message" class="form-control" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                            <textarea id="message" class="form-control" placeholder="Cuéntame sobre tu idea o proyecto..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
@@ -434,17 +611,18 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-text">
-                <p>&copy; 2026 Paulo César (Paulinter) — Diseñado & Desarrollado con HTML5, CSS3 y JS Nativo. Listo para GitHub Pages.</p>
+                <p>&copy; 2026 <strong>Paulo César (Paulinter)</strong> — Diseñado &amp; Desarrollado con HTML5, CSS3 &amp; JS Nativo. Listo para GitHub Pages.</p>
             </div>
             <div class="social-links">
                 <a href="https://github.com/Paulinter" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="https://youtube.com/@paulinter0909" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://wa.me/51944662808" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
 
     <!-- Project Details Modal -->
-    <div class="modal-overlay" id="project-modal">
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <button class="modal-close" id="modal-close" aria-label="Cerrar Modal">
                 <i class="fa-solid fa-xmark"></i>
@@ -459,17 +637,53 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <a href="#" id="modal-github-link" target="_blank" class="btn btn-primary">
+                <a href="#" id="modal-github-link" target="_blank" class="btn btn-primary" rel="noopener">
                     <i class="fa-brands fa-github"></i> Ver Código en GitHub
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Toast Notifications Container -->
-    <div class="toast-container" id="toast-container"></div>
+    <!-- CV Overview Modal -->
+    <div class="modal-overlay" id="cv-modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="modal-close" id="cv-modal-close" aria-label="Cerrar Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-id-card"></i> Resumen Profesional — Paulo César</h3>
+            </div>
+            <div class="modal-body cv-body">
+                <div class="cv-section">
+                    <h4><i class="fa-solid fa-graduation-cap"></i> Educación</h4>
+                    <p><strong>Ingeniería de Software</strong> — En Cursado</p>
+                    <p class="cv-sub">Especialización en lógica algorítmica, C++, desarrollo web moderno y robótica.</p>
+                </div>
+                <div class="cv-section">
+                    <h4><i class="fa-solid fa-laptop-code"></i> Competencias Principales</h4>
+                    <ul class="cv-list">
+                        <li><strong>Frontend:</strong> HTML5 Semántico, CSS3 (Flexbox/Grid/Glassmorphism), JS ES6+.</li>
+                        <li><strong>Software/Lógica:</strong> C++ OO, Arduino, PSeInt, Estructuras de Datos, Algoritmos.</li>
+                        <li><strong>Herramientas:</strong> Git, GitHub Pages, Linux CLI, Tinkercad, Proteus, Visual Studio Code.</li>
+                    </ul>
+                </div>
+                <div class="cv-section">
+                    <h4><i class="fa-solid fa-bullseye"></i> Idiomas</h4>
+                    <p>Español (Nativo) | Inglés (Técnico / Lectura de Documentación)</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/Paulinter" target="_blank" class="btn btn-primary" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Ir al Perfil de GitHub
+                </a>
+            </div>
+        </div>
+    </div>
 
-    <!-- Back to Top Button -->
+    <!-- Toast Notifications Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
