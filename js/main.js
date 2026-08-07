@@ -675,7 +675,7 @@ int main() {
   });
 
   copyEmailBtn?.addEventListener('click', () => {
-    const emailText = 'paulo.dev@example.com';
+    const emailText = 'paulo.escobar.dev@gmail.com';
     const done = () => showToast(`Correo copiado: <strong>${emailText}</strong> 📋`);
     if (navigator.clipboard?.writeText) {
       navigator.clipboard.writeText(emailText).then(done).catch(() => done());
