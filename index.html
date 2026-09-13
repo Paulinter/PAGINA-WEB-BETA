@@ -1,59 +1,26 @@
 <!doctype html>
-<html lang="es"><head>
+<html lang="es">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portafolio de Paulo César, estudiante de Ingeniería de Software enfocado en desarrollo web, C++ y sistemas con Arduino.">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#080c18">
   <title>Paulo César | Portafolio</title>
-  <style>
-    :root { --bg:#0b1020; --surface:#121a31; --line:#26345c; --text:#eef2ff; --muted:#b4c0e0; --accent:#77a5ff; --accent-2:#a78bfa; --success:#5eead4; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--text); background:radial-gradient(circle at 85% 0%,#253a73 0,transparent 31rem),radial-gradient(circle at 0 30%,#3b2367 0,transparent 28rem),var(--bg); font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:inherit; }
-    .wrap { width:min(1100px,calc(100% - 2rem)); margin:auto; }
-    header { position:sticky; top:0; z-index:4; border-bottom:1px solid #273354aa; background:#0b1020e8; backdrop-filter:blur(12px); }
-    nav { min-height:4.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
-    .brand { font-size:1.1rem; font-weight:800; text-decoration:none; letter-spacing:.03em; }
-    .brand span { color:var(--accent); }
-    .navlinks { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:1rem; font-size:.93rem; }
-    .navlinks a { color:var(--muted); text-decoration:none; }
-    .navlinks a:hover,.navlinks a:focus { color:var(--text); }
-    section { padding:5rem 0; }
-    .hero { min-height:76vh; display:grid; place-items:center; padding:6rem 0; }
-    .eyebrow { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .7rem; border:1px solid #5876c8; border-radius:999px; color:#cbd8ff; background:#162143b5; font-size:.86rem; font-weight:700; }
-    .eyebrow::before { content:""; width:.5rem; height:.5rem; border-radius:50%; background:var(--success); box-shadow:0 0 1rem var(--success); }
-    h1,h2,h3 { line-height:1.15; margin:0 0 1rem; }
-    h1 { max-width:850px; margin-top:1.2rem; font-size:clamp(2.5rem,8vw,5.5rem); letter-spacing:-.06em; }
-    h1 em { color:var(--accent); font-style:normal; }
-    .lead { max-width:700px; margin:0; color:var(--muted); font-size:clamp(1.05rem,2vw,1.25rem); }
-    .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:2rem; }
-    .button { display:inline-flex; align-items:center; justify-content:center; min-height:2.9rem; padding:.65rem 1rem; border:1px solid var(--line); border-radius:.7rem; color:var(--text); background:#172243; font-weight:750; text-decoration:none; cursor:pointer; }
-    .button.primary { border-color:transparent; color:#071024; background:linear-gradient(100deg,var(--accent),#9ab8ff); }
-    .button:hover,.button:focus { transform:translateY(-2px); filter:brightness(1.1); }
-    .section-label { color:var(--accent); text-transform:uppercase; font-size:.8rem; letter-spacing:.13em; font-weight:800; }
-    h2 { font-size:clamp(1.9rem,4vw,3.1rem); letter-spacing:-.04em; }
-    .intro { max-width:680px; color:var(--muted); }
-    .grid { display:grid; gap:1rem; grid-template-columns:repeat(3,1fr); margin-top:2rem; }
-    .card { padding:1.35rem; border:1px solid var(--line); border-radius:1rem; background:linear-gradient(145deg,#182344d9,#10182ed9); box-shadow:0 1.4rem 3rem #04081645; }
-    .card p { margin:0; color:var(--muted); }
-    .card h3 { font-size:1.1rem; }
-    .project { display:grid; gap:.7rem; }
-    .tag { width:max-content; color:#cdd9ff; border:1px solid #3a4d82; border-radius:999px; padding:.22rem .6rem; font-size:.8rem; }
-    .project a { color:#cdd9ff; font-weight:700; }
-    .note { margin-top:1.2rem; padding:1rem; border-left:3px solid var(--accent); color:var(--muted); background:#111a34b3; }
-    .contact { display:grid; grid-template-columns:.85fr 1.15fr; gap:2rem; align-items:start; }
-    .email { display:block; margin:1rem 0; color:var(--text); font-size:clamp(1.1rem,2vw,1.4rem); font-weight:800; word-break:break-word; }
-    form { display:grid; gap:1rem; }
-    label { display:grid; gap:.4rem; font-weight:700; }
-    input,textarea { width:100%; padding:.8rem .9rem; border:1px solid #425886; border-radius:.65rem; color:var(--text); background:#0c1327; font:inherit; }
-    input:focus,textarea:focus { outline:3px solid #77a5ff55; border-color:var(--accent); }
-    textarea { min-height:9rem; resize:vertical; }
-    .form-help { margin:0; color:var(--muted); font-size:.9rem; }
-    footer { padding:2rem 0; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-    @media (max-width:750px) { .grid,.contact { grid-template-columns:1fr; } nav { padding:.75rem 0; align-items:flex-start; } .navlinks { gap:.55rem .85rem; } section { padding:3.8rem 0; } }
-    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
-  </style>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Script -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header>
@@ -91,9 +58,18 @@
         <p class="section-label">Enfoque actual</p>
         <h2>Áreas en las que sigo creciendo</h2>
         <div class="grid">
-          <article class="card"><h3>Desarrollo web</h3><p>HTML, CSS y JavaScript para crear interfaces accesibles, responsivas y fáciles de usar.</p></article>
-          <article class="card"><h3>C++ y lógica</h3><p>Práctica de programación orientada a objetos, estructuras de datos y resolución de problemas.</p></article>
-          <article class="card"><h3>Arduino y prototipado</h3><p>Exploración de sensores, actuadores y programación de sistemas embebidos como parte de mi aprendizaje.</p></article>
+          <article class="card">
+            <h3>Desarrollo web</h3>
+            <p>HTML, CSS y JavaScript para crear interfaces accesibles, responsivas y fáciles de usar.</p>
+          </article>
+          <article class="card">
+            <h3>C++ y lógica</h3>
+            <p>Práctica de programación orientada a objetos, estructuras de datos y resolución de problemas.</p>
+          </article>
+          <article class="card">
+            <h3>Arduino y prototipado</h3>
+            <p>Exploración de sensores, actuadores y programación de sistemas embebidos como parte de mi aprendizaje.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -151,7 +127,8 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap">© 2026 Paulo César (Paulinter) · Portafolio en evolución.</div></footer>
-
-
-</body></html>
+  <footer>
+    <div class="wrap">© 2026 Paulo César (Paulinter) · Portafolio en evolución.</div>
+  </footer>
+</body>
+</html>
