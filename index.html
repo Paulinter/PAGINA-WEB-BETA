@@ -1,134 +1,609 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio de Paulo César, estudiante de Ingeniería de Software enfocado en desarrollo web, C++ y sistemas con Arduino.">
-  <meta name="theme-color" content="#080c18">
-  <title>Paulo César | Portafolio</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Soy Paulo César, estudiante de Ingeniería de Software. Explora mi portafolio, mis proyectos web y mi aprendizaje en C++ y Arduino."
+    />
+    <meta name="theme-color" content="#111413" />
+    <meta property="og:title" content="Paulo César — Código con propósito" />
+    <meta
+      property="og:description"
+      content="Desarrollo web, lógica y prototipos. Un portafolio que crece con cada proyecto."
+    />
+    <meta property="og:type" content="website" />
+    <title>Paulo César — Código con propósito</title>
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="favicon-512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="wrap navigation" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Paulo César, inicio"
+          ><span class="brand-symbol" aria-hidden="true">p.</span>paulinter</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          Menú <span aria-hidden="true">+</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#enfoque">Enfoque</a>
+          <a class="nav-contact" href="#contacto"
+            >Hablemos <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main id="contenido">
+      <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="availability">
+            <span class="status-dot" aria-hidden="true"></span> Abierto a
+            aprender y colaborar
+          </p>
+          <p class="hero-intro">HOLA, SOY PAULO CÉSAR</p>
+          <h1 id="hero-title">
+            Ideas claras.<br />Código con<br /><span>propósito.</span>
+          </h1>
+          <p class="hero-description">
+            Estudiante de Ingeniería de Software. Convierto la curiosidad en
+            proyectos web, lógica y prototipos que resuelven problemas reales.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#proyectos"
+              >Explorar proyectos <span aria-hidden="true">↗</span></a
+            >
+            <a
+              class="text-link"
+              href="https://github.com/Paulinter"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Mi GitHub <span aria-hidden="true">↗</span
+              ><span class="sr-only"> (abre en otra pestaña)</span></a
+            >
+          </div>
+          <div class="hero-footnote">
+            <span class="crosshair" aria-hidden="true">⊕</span> Aprender.
+            Construir. Volver a intentar.
+          </div>
+        </div>
+        <div
+          class="hero-art"
+          aria-label="Ilustración de un editor de código con el perfil de Paulo"
+        >
+          <div class="art-grid" aria-hidden="true"></div>
+          <span class="art-label label-top">IDEAS → CÓDIGO → REALIDAD</span>
+          <span class="art-cross cross-one" aria-hidden="true">+</span
+          ><span class="art-cross cross-two" aria-hidden="true">+</span>
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="window-dots" aria-hidden="true"
+                ><i></i><i></i><i></i></span
+              ><span>paulo.config.js</span
+              ><span class="window-icon" aria-hidden="true">↗</span>
+            </div>
+            <div class="editor-tab">
+              <span aria-hidden="true">JS</span> sobre-mi.js
+              <span aria-hidden="true">×</span>
+            </div>
+            <!-- prettier-ignore -->
+            <div class="code-lines" aria-hidden="true">
+              <div><b>01</b><code><span class="code-purple">const</span> developer = {</code></div>
+              <div><b>02</b><code>  nombre: <span class="code-green">'Paulo César'</span>,</code></div>
+              <div><b>03</b><code>  alias: <span class="code-green">'Paulinter'</span>,</code></div>
+              <div><b>04</b><code>  enfoque: [</code></div>
+              <div><b>05</b><code>    <span class="code-green">'Web'</span>, <span class="code-green">'C++'</span>, <span class="code-green">'Arduino'</span></code></div>
+              <div><b>06</b><code>  ],</code></div>
+              <div><b>07</b><code>  aprendiendo: <span class="code-orange">true</span></code></div>
+              <div><b>08</b><code>};</code></div>
+              <div><b>09</b><code> </code></div>
+              <div><b>10</b><code><span class="code-comment">// Un proyecto a la vez.</span></code></div>
+              <div><b>11</b><code>developer.<span class="code-yellow">construir</span>();<span class="code-caret"></span></code></div>
+            </div>
+            <div class="editor-status">
+              <span>⌘ main</span
+              ><span>JavaScript <span class="code-green">●</span></span>
+            </div>
+          </div>
+          <div class="build-badge">
+            <span class="badge-check" aria-hidden="true">✓</span>
+            <div>
+              <strong>Siempre en construcción</strong
+              ><span>La siguiente idea empieza aquí.</span>
+            </div>
+          </div>
+          <span class="art-label label-bottom"
+            >&lt;/&gt; HECHO CON CURIOSIDAD</span
+          >
+        </div>
+        <div class="hero-bottom">
+          <span>PORTAFOLIO PERSONAL <span class="muted">/ 2026</span></span
+          ><a href="#sobre-mi"
+            >Sigue explorando <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Script -->
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav class="wrap" aria-label="Principal">
-      <a class="brand" href="#inicio">&lt;Paulo<span>/Dev</span>&gt;</a>
-      <div class="navlinks">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#enfoque">Enfoque</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap">
-        <span class="eyebrow">Disponible para aprender y colaborar</span>
-        <h1>Hola, soy <em>Paulo César.</em><br>Estudiante de Ingeniería de Software.</h1>
-        <p class="lead">Estoy desarrollando mi experiencia en aplicaciones web, programación con C++ y prototipos con Arduino. Me interesan los proyectos donde el software resuelve problemas concretos.</p>
-        <div class="actions">
-          <a class="button primary" href="#proyectos">Ver proyectos</a>
-          <a class="button" href="#contacto">Escribirme por correo</a>
+      <div class="tech-band" aria-label="Tecnologías que estoy aprendiendo">
+        <div class="wrap">
+          <span class="band-label">MI CAJA DE HERRAMIENTAS</span
+          ><span>HTML & CSS</span><span>JavaScript</span><span>C++</span
+          ><span>Arduino</span><span>Git & GitHub</span>
         </div>
       </div>
-    </section>
-    <section id="sobre-mi">
-      <div class="wrap">
-        <p class="section-label">Perfil</p>
-        <h2>Aprender, construir y documentar.</h2>
-        <p class="intro">Actualmente estoy en formación en Ingeniería de Software. Mi objetivo es fortalecer fundamentos de programación y convertirlos en proyectos claros, útiles y bien explicados.</p>
-      </div>
-    </section>
-    <section id="enfoque">
-      <div class="wrap">
-        <p class="section-label">Enfoque actual</p>
-        <h2>Áreas en las que sigo creciendo</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Desarrollo web</h3>
-            <p>HTML, CSS y JavaScript para crear interfaces accesibles, responsivas y fáciles de usar.</p>
-          </article>
-          <article class="card">
-            <h3>C++ y lógica</h3>
-            <p>Práctica de programación orientada a objetos, estructuras de datos y resolución de problemas.</p>
-          </article>
-          <article class="card">
-            <h3>Arduino y prototipado</h3>
-            <p>Exploración de sensores, actuadores y programación de sistemas embebidos como parte de mi aprendizaje.</p>
-          </article>
+
+      <section
+        class="section wrap about"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <div class="section-kicker">
+          <span>01 / SOBRE MÍ</span><span class="kicker-line"></span>
         </div>
-      </div>
-    </section>
-    <section id="proyectos">
-      <div class="wrap">
-        <p class="section-label">Portafolio</p>
-        <h2>Trabajo publicado y prácticas en desarrollo</h2>
-        <div class="grid">
-          <article class="card project">
-            <span class="tag">Publicado</span>
-            <h3>Este portafolio web</h3>
-            <p>Sitio personal creado para presentar mi perfil, mis áreas de aprendizaje y formas de contacto.</p>
-            <a href="https://github.com/Paulinter/PAGINA-WEB-BETA" target="_blank" rel="noopener">Ver repositorio ↗</a>
-          </article>
-          <article class="card project">
-            <span class="tag">En aprendizaje</span>
-            <h3>Prácticas con C++ y Arduino</h3>
-            <p>Ejercicios y prototipos orientados a entender la lógica de programación, sensores y actuadores.</p>
-          </article>
-          <article class="card project">
-            <span class="tag">En aprendizaje</span>
-            <h3>Algoritmos y estructuras</h3>
-            <p>Resolución de ejercicios para reforzar condicionales, ciclos, arreglos y pensamiento algorítmico.</p>
-          </article>
+        <div class="about-layout">
+          <h2 id="about-title">
+            La curiosidad<br />es mi punto<br />de
+            <span class="serif-word">partida.</span>
+          </h2>
+          <div class="about-copy">
+            <p class="large-copy">
+              Me gusta entender cómo funcionan las cosas. Y después, construir
+              mi propia versión.
+            </p>
+            <p>
+              Estoy en formación en Ingeniería de Software. Mi camino combina
+              desarrollo web, práctica de programación con C++ y experimentación
+              con Arduino.
+            </p>
+            <p>
+              Busco fortalecer mis fundamentos y convertir lo que aprendo en
+              proyectos útiles, con código claro y un proceso que pueda
+              explicar.
+            </p>
+            <div class="about-signature">
+              <span class="signature-mark" aria-hidden="true">pc.</span>
+              <div>
+                <strong>Paulo César</strong
+                ><span>Estudiante · Desarrollador en formación</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="note">Solo presento como publicado lo que puede verificarse en mi repositorio. Las demás tarjetas describen áreas de práctica, no productos terminados.</p>
-      </div>
-    </section>
-    <section id="contacto">
-      <div class="wrap contact">
-        <div>
-          <p class="section-label">Contacto</p>
-          <h2>Conversemos por correo.</h2>
-          <p class="intro">Para sugerencias, colaboraciones o consultas, usa el formulario. Los mensajes se entregarán a:</p>
-          <a class="email" href="mailto:paulo.escobar.dev@gmail.com">paulo.escobar.dev@gmail.com</a>
-          <p class="intro">No se muestra ningún número telefónico ni enlace de mensajería.</p>
+        <div class="principles">
+          <div>
+            <span>01</span><strong>Entender el problema</strong>
+            <p>Antes del código, las preguntas.</p>
+          </div>
+          <div>
+            <span>02</span><strong>Construir con intención</strong>
+            <p>Cada decisión tiene un porqué.</p>
+          </div>
+          <div>
+            <span>03</span><strong>Aprender del proceso</strong>
+            <p>Probar, documentar y mejorar.</p>
+          </div>
         </div>
-        <form action="https://formsubmit.co/paulo.escobar.dev@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="Nueva sugerencia desde el portafolio de Paulo César">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://pagina-web-beta.onrender.com/?enviado=1#contacto">
-          <label>Nombre
-            <input name="nombre" type="text" autocomplete="name" required="">
-          </label>
-          <label>Correo electrónico
-            <input name="email" type="email" autocomplete="email" required="">
-          </label>
-          <label>Mensaje
-            <textarea name="mensaje" required=""></textarea>
-          </label>
-          <button class="button primary" type="submit">Enviar sugerencia</button>
-          <p class="form-help">El envío se procesa mediante FormSubmit y llega al correo indicado. La primera vez, FormSubmit pedirá activar el destinatario desde un correo de confirmación.</p>
-        </form>
+      </section>
+
+      <section
+        class="projects-section"
+        id="proyectos"
+        aria-labelledby="projects-title"
+      >
+        <div class="wrap section">
+          <div class="section-kicker">
+            <span>02 / PROYECTOS</span><span class="kicker-line"></span
+            ><span>DEL APRENDIZAJE A LA PRÁCTICA</span>
+          </div>
+          <div class="section-heading">
+            <h2 id="projects-title">
+              Lo que estoy<br /><span class="serif-word">construyendo.</span>
+            </h2>
+            <p>
+              Un proyecto publicado y dos líneas de práctica.<br />Cada paso
+              suma al siguiente.
+            </p>
+          </div>
+          <div
+            class="project-filters"
+            role="group"
+            aria-label="Filtrar proyectos"
+          >
+            <button
+              type="button"
+              class="filter active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Todos <span>03</span></button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="web"
+              aria-pressed="false"
+            >
+              Desarrollo web</button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="practice"
+              aria-pressed="false"
+            >
+              En aprendizaje
+            </button>
+          </div>
+          <p
+            class="sr-only"
+            id="filter-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div class="project-grid">
+            <article class="project-card featured" data-category="web">
+              <div class="project-visual web-visual" aria-hidden="true">
+                <div class="preview-browser">
+                  <div class="preview-top">
+                    <span>p.</span
+                    ><span>Sobre mí &nbsp; Proyectos &nbsp; Contacto</span
+                    ><span>↗</span>
+                  </div>
+                  <div class="preview-content">
+                    <small>PAULO CÉSAR / DEVELOPER</small
+                    ><strong
+                      >Ideas claras.<br />Código con<br /><em
+                        >propósito.</em
+                      ></strong
+                    >
+                    <div class="preview-cta">Explorar proyectos ↗</div>
+                  </div>
+                  <div class="preview-symbol">&lt;/&gt;</div>
+                  <div class="preview-footer">WEB · CÓDIGO · CURIOSIDAD</div>
+                </div>
+                <span class="visual-caption">DISEÑO & DESARROLLO WEB</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-number">PROYECTO 01</span
+                  ><span class="tag published"
+                    ><span aria-hidden="true">●</span> Publicado</span
+                  >
+                </div>
+                <h3>Mi espacio en la web</h3>
+                <p>
+                  Un portafolio personal para conectar mi perfil, mis proyectos
+                  y mis ganas de seguir aprendiendo.
+                </p>
+                <div class="chips">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://github.com/Paulinter/PAGINA-WEB-BETA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Explorar repositorio <span aria-hidden="true">↗</span
+                  ><span class="sr-only"> (abre en otra pestaña)</span></a
+                >
+              </div>
+            </article>
+            <article class="project-card" data-category="practice">
+              <div class="project-visual arduino-visual" aria-hidden="true">
+                <svg viewBox="0 0 360 220" fill="none">
+                  <path
+                    d="M0 90h87v40h42M360 150h-80v-65h-51M180 0v38M180 184v36"
+                    stroke="#51887b"
+                    stroke-width="2"
+                  />
+                  <circle cx="87" cy="90" r="4" fill="#bdedcd" />
+                  <circle cx="280" cy="150" r="4" fill="#bdedcd" />
+                  <rect
+                    x="109"
+                    y="43"
+                    width="145"
+                    height="135"
+                    rx="12"
+                    fill="#226e5c"
+                    stroke="#81af92"
+                  />
+                  <rect
+                    x="149"
+                    y="86"
+                    width="65"
+                    height="57"
+                    rx="3"
+                    fill="#102f28"
+                    stroke="#9bbf9c"
+                  />
+                  <path
+                    d="M159 79v-9m13 9v-9m13 9v-9m13 9v-9M159 158v-9m13 9v-9m13 9v-9m13 9v-9M134 96h9m-9 13h9m-9 13h9M220 96h9m-9 13h9m-9 13h9"
+                    stroke="#c8d6bc"
+                    stroke-width="3"
+                  />
+                  <rect
+                    x="99"
+                    y="53"
+                    width="27"
+                    height="30"
+                    rx="3"
+                    fill="#b8c6b3"
+                  />
+                  <circle cx="234" cy="61" r="5" fill="#c9f279" />
+                  <path
+                    d="M133 54h74M121 166h113"
+                    stroke="#102f28"
+                    stroke-width="6"
+                    stroke-dasharray="5 6"
+                  />
+                  <text
+                    x="163"
+                    y="122"
+                    fill="#bcedc4"
+                    font-family="monospace"
+                    font-size="19"
+                  >
+                    C++
+                  </text></svg
+                ><span class="visual-caption">DEL CÓDIGO AL MUNDO FÍSICO</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-number">PRÁCTICA 02</span
+                  ><span class="tag">En aprendizaje</span>
+                </div>
+                <h3>Más allá de la pantalla</h3>
+                <p>
+                  Prácticas con C++ y Arduino para explorar la relación entre
+                  lógica, sensores y actuadores.
+                </p>
+                <div class="chips"><span>C++</span><span>Arduino</span></div>
+                <button
+                  type="button"
+                  class="project-link"
+                  data-detail="arduino"
+                >
+                  Conocer el enfoque <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+            <article class="project-card" data-category="practice">
+              <div class="project-visual algorithm-visual" aria-hidden="true">
+                <div class="algorithm-art">
+                  <span class="flow-node">problema</span
+                  ><span class="flow-line"></span
+                  ><span class="flow-decision">pensar</span>
+                  <div class="flow-branches">
+                    <span>probar</span><span>mejorar</span>
+                  </div>
+                </div>
+                <span class="visual-caption">UNA SOLUCIÓN, PASO A PASO</span>
+              </div>
+              <div class="project-content">
+                <div class="project-meta">
+                  <span class="project-number">PRÁCTICA 03</span
+                  ><span class="tag">En aprendizaje</span>
+                </div>
+                <h3>Primero, la lógica</h3>
+                <p>
+                  Ejercicios para convertir problemas en pasos claros y reforzar
+                  el pensamiento algorítmico.
+                </p>
+                <div class="chips">
+                  <span>Algoritmos</span><span>Estructuras</span>
+                </div>
+                <button
+                  type="button"
+                  class="project-link"
+                  data-detail="algorithms"
+                >
+                  Conocer el enfoque <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <a
+            class="all-github text-link"
+            href="https://github.com/Paulinter"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Más sobre mi trabajo en GitHub <span aria-hidden="true">↗</span
+            ><span class="sr-only"> (abre en otra pestaña)</span></a
+          >
+        </div>
+      </section>
+
+      <section
+        class="section wrap focus"
+        id="enfoque"
+        aria-labelledby="focus-title"
+      >
+        <div class="section-kicker">
+          <span>03 / ENFOQUE ACTUAL</span><span class="kicker-line"></span>
+        </div>
+        <div class="focus-layout">
+          <div>
+            <h2 id="focus-title">
+              Buenos proyectos.<br /><span class="serif-word"
+                >Buenas bases.</span
+              >
+            </h2>
+            <p>
+              Estas son las áreas en las que estoy invirtiendo mi tiempo y
+              curiosidad.
+            </p>
+            <a class="text-link" href="#contacto"
+              >¿Aprendemos juntos? <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="focus-list">
+            <article>
+              <span class="focus-icon" aria-hidden="true">&lt;/&gt;</span>
+              <div>
+                <h3>Desarrollo web</h3>
+                <p>
+                  Interfaces accesibles, adaptables y fáciles de usar. Del
+                  primer boceto a la interacción.
+                </p>
+                <small>HTML · CSS · JAVASCRIPT</small>
+              </div>
+              <span class="focus-index">01</span>
+            </article>
+            <article>
+              <span class="focus-icon" aria-hidden="true">{ }</span>
+              <div>
+                <h3>Lógica de programación</h3>
+                <p>
+                  Condicionales, ciclos, arreglos y estructuras. Entender la
+                  solución antes de escribirla.
+                </p>
+                <small>C++ · ALGORITMOS</small>
+              </div>
+              <span class="focus-index">02</span>
+            </article>
+            <article>
+              <span class="focus-icon" aria-hidden="true">⊞</span>
+              <div>
+                <h3>Prototipado con Arduino</h3>
+                <p>
+                  Experimentar con sensores y actuadores para conectar el
+                  software con el entorno.
+                </p>
+                <small>ARDUINO · SISTEMAS EMBEBIDOS</small>
+              </div>
+              <span class="focus-index">03</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="wrap section">
+          <div class="section-kicker">
+            <span>04 / CONTACTO</span><span class="kicker-line"></span>
+          </div>
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <span class="contact-star" aria-hidden="true">✳</span>
+              <h2 id="contact-title">
+                Una buena idea<br />empieza con un<br /><span>hola.</span>
+              </h2>
+              <p>
+                ¿Tienes una idea, una sugerencia o un proyecto para aprender
+                juntos? Me gustaría conocerlo.
+              </p>
+              <a class="email-link" href="mailto:paulo.escobar.dev@gmail.com"
+                >paulo.escobar.dev@gmail.com
+                <span aria-hidden="true">↗</span></a
+              ><button class="copy-email" type="button">
+                Copiar correo <span aria-hidden="true">⧉</span>
+              </button>
+              <p class="copy-status" role="status" aria-live="polite"></p>
+            </div>
+            <form
+              action="https://formsubmit.co/paulo.escobar.dev@gmail.com"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje desde el portafolio de Paulo César"
+              /><input type="hidden" name="_template" value="table" /><input
+                type="text"
+                name="_honey"
+                class="honeypot"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                aria-label="Dejar vacío"
+              />
+              <h3>Cuéntame qué tienes en mente.</h3>
+              <div class="form-row">
+                <label for="name"
+                  >Tu nombre<input
+                    id="name"
+                    name="nombre"
+                    type="text"
+                    placeholder="¿Cómo te llamas?"
+                    autocomplete="name"
+                    maxlength="100"
+                    required /></label
+                ><label for="email"
+                  >Tu correo<input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="hola@ejemplo.com"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                /></label>
+              </div>
+              <label for="message"
+                >Tu mensaje<textarea
+                  id="message"
+                  name="mensaje"
+                  placeholder="Me gustaría conversar sobre…"
+                  rows="5"
+                  minlength="10"
+                  maxlength="5000"
+                  required
+                ></textarea></label
+              ><button class="button primary" type="submit">
+                Enviar mensaje <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-help">
+                Tu nombre, correo y mensaje se procesan a través de FormSubmit.
+                También puedes escribirme directamente por correo.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap site-footer">
+      <a class="brand" href="#inicio"
+        ><span class="brand-symbol" aria-hidden="true">p.</span>paulinter</a
+      >
+      <p>© <span id="year">2026</span> Paulo César. Siempre aprendiendo.</p>
+      <a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-inner">
+        <button class="dialog-close" type="button" aria-label="Cerrar detalles">
+          ×</button
+        ><span class="section-kicker">CUADERNO DE APRENDIZAJE</span>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+        <h3>Qué estoy practicando</h3>
+        <ul id="dialog-topics"></ul>
+        <p class="dialog-note">
+          Estas prácticas forman parte de mi aprendizaje. Todavía no tienen un
+          repositorio público enlazado.
+        </p>
+        <a class="button primary" href="#contacto" id="dialog-contact"
+          >Conversemos <span aria-hidden="true">↗</span></a
+        >
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="wrap">© 2026 Paulo César (Paulinter) · Portafolio en evolución.</div>
-  </footer>
-</body>
+    </dialog>
+  </body>
 </html>

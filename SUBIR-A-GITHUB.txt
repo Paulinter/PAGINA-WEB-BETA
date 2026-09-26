@@ -1,0 +1,83 @@
+SUBIR EL REDISEÑO A TU MISMO REPOSITORIO DESDE CMD (WINDOWS)
+Repositorio: https://github.com/Paulinter/PAGINA-WEB-BETA
+
+Ejecuta los bloques en orden. Si un comando informa un error, detente antes de seguir.
+No necesitas Node.js. No se borra el historial ni se utiliza push --force.
+
+1. DESCARGA
+Guarda PAGINA-WEB-BETA-PRO.zip en tu carpeta Descargas con ese nombre exacto.
+Si tu navegador lo renombró, corrige el nombre en el comando de extracción.
+
+2. INSTALA GIT (solo si todavía no lo tienes)
+Abre CMD y ejecuta:
+
+winget install --id Git.Git -e --source winget
+
+Después cierra CMD y vuelve a abrirlo. Si winget no existe, instala Git desde:
+https://git-scm.com/install/windows
+
+3. EXTRAE LOS ARCHIVOS Y CLONA EL REPOSITORIO
+Los siguientes comandos son para CMD. La línea powershell funciona dentro de CMD.
+Usan carpetas nuevas con fecha y hora para no sobrescribir otro clon tuyo.
+
+for /f %i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd-HHmmss"') do set "WEB_VERSION=%i"
+set "WEB_FILES=%USERPROFILE%\Downloads\PAGINA-WEB-BETA-PRO-%WEB_VERSION%"
+set "WEB_REPO=%USERPROFILE%\Documents\PAGINA-WEB-BETA-%WEB_VERSION%"
+git --version
+powershell -NoProfile -Command "Expand-Archive -LiteralPath (Join-Path $env:USERPROFILE 'Downloads\PAGINA-WEB-BETA-PRO.zip') -DestinationPath $env:WEB_FILES"
+git clone --branch main https://github.com/Paulinter/PAGINA-WEB-BETA.git "%WEB_REPO%"
+cd /d "%WEB_REPO%"
+
+Nota: escribe %i tal como aparece si pegas el comando en CMD. En un archivo .bat se usa %%i.
+
+4. COPIA EL REDISEÑO ENCIMA DEL CLON
+
+xcopy "%WEB_FILES%\PAGINA-WEB-BETA-PRO\*" "%WEB_REPO%\" /E /H /I /Y
+start "" index.html
+git status --short
+
+La web se abrirá para que la revises. El ZIP no incluye carpeta .git.
+El comando copia y actualiza los archivos entregados; conserva los demás archivos del repositorio.
+
+5. CONFIGURA LA IDENTIDAD DEL COMMIT SOLO EN ESTE REPOSITORIO
+El correo noreply de abajo corresponde al ID público y usuario de tu cuenta de GitHub.
+También puedes sustituirlo por tu correo de commits configurado en GitHub.
+
+git config user.name "Paulinter"
+git config user.email "201617599+Paulinter@users.noreply.github.com"
+
+6. CREA EL COMMIT Y SUBE LOS CAMBIOS
+
+git add index.html css/style.css js/main.js README.md SUBIR-A-GITHUB.txt .nojekyll
+git diff --cached --stat
+git commit -m "Rediseña el portafolio con interfaz adaptable y proyectos interactivos"
+git push origin main
+
+Si Git abre una ventana del navegador, inicia sesión con Paulinter y autoriza Git.
+Si solicita una contraseña directamente en CMD, no uses tu contraseña de GitHub:
+usa el inicio de sesión del administrador de credenciales de Git para Windows.
+
+Si aparece rejected / non-fast-forward porque hubo cambios remotos después de clonar:
+
+git pull --rebase origin main
+
+Si termina sin conflictos:
+
+git push origin main
+
+Si aparecen conflictos, no fuerces la subida. Revisa los archivos señalados.
+
+7. PUBLICA LA PÁGINA (SI TODAVÍA NO ACTIVASTE GITHUB PAGES)
+Abre esta dirección:
+https://github.com/Paulinter/PAGINA-WEB-BETA/settings/pages
+
+Source: Deploy from a branch
+Branch: main
+Folder: /(root)
+Pulsa Save y espera a que finalice el despliegue.
+
+Dirección habitual de la web tras publicar:
+https://paulinter.github.io/PAGINA-WEB-BETA/
+
+El formulario conserva el correo de tu versión original. Si FormSubmit todavía
+no ha activado el destinatario, debes confirmar el correo que te envía al primer uso.
