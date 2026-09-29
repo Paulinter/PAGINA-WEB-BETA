@@ -1,52 +1,47 @@
-# 🚀 Portafolio Web Profesional - PAGINA-WEB-BETA
+# Paulo César — Portafolio de Software
 
-Versión mejorada y optimizada para **GitHub Pages** del portafolio personal de **Paulo César (Paulinter)** — Estudiante de Ingeniería de Software.
+Portafolio personal de **Paulo César (Paulinter)**, estudiante de Ingeniería de Software. Sitio estático en español, construido con HTML, CSS y JavaScript nativo.
 
----
+## Diseño e interacciones
 
-## ✨ Características y Mejoras Implementadas
+- Identidad editorial con fondo marfil, acentos lima y tipografía Space Grotesk, DM Sans y JetBrains Mono.
+- Ilustraciones creadas con SVG y CSS, sin imágenes pesadas ni bibliotecas de interfaz.
+- Diseño responsivo, menú móvil con estado accesible y navegación por secciones.
+- Filtros de proyectos y detalles mediante diálogos nativos: cierre con Escape y devolución del foco.
+- Diferenciación entre el portafolio publicado y las prácticas que siguen en aprendizaje.
+- Contacto por correo, botón para copiar la dirección y formulario con validación nativa.
+- Enlace para saltar al contenido, foco visible y respeto a la preferencia de movimiento reducido.
+- Metadatos de descripción y Open Graph.
 
-1. **🎨 Estética Cyberpunk Glassmorphic Premium**:
-   - Fondo dinámico con malla de gradientes de luz ambientada.
-   - Componentes translúcidos con bordes neón interactivos y resplandor al pasar el cursor (`cursor-glow`).
-   - Tipografía moderna (*Plus Jakarta Sans* & *Fira Code*).
+## Archivos
 
-2. **💻 Terminal CLI Interactiva (paulinter-cli v2.0)**:
-   - Consola embebida en la sección Hero donde los visitantes pueden ejecutar comandos reales:
-     - `help`, `about`, `skills`, `projects`, `contact`, `repo`, `sudo hire`, `clear`.
+- `index.html`: contenido y estructura semántica.
+- `css/style.css`: identidad visual, ilustraciones y estilos responsivos.
+- `js/main.js`: navegación, filtros, diálogos y contacto.
+- Favicons y archivo de verificación de Google existentes.
 
-3. **📂 Filtro Dinámico de Proyectos & Ventana Modal**:
-   - Filtrado por pestañas en tiempo real (*Todos*, *Desarrollo Web*, *C++ & Robótica*, *Algoritmos*).
-   - Modal interactivo desplegable al hacer clic en cualquier proyecto con detalles técnicos y características.
+## Vista local
 
-4. **⚡ Animaciones de Scroll & Habilidades**:
-   - Barras de progreso animadas en la sección de habilidades (*Intersection Observer*).
-   - Indicador de scroll de navegación activa.
-   - Botón flotante para regresar arriba (*Back to Top*).
+No hay instalación ni compilación de la web. Abre `index.html` o sirve la carpeta con cualquier servidor estático.
 
-5. **✉️ Contacto Interactivo & Toast Notifications**:
-   - Botón para copiar correo electrónico al portapapeles con notificación flotante (Toast).
-   - Integración directa con WhatsApp y redes sociales.
-   - Formulario de contacto responsive.
+Las fuentes se cargan desde Google Fonts; el sitio tiene fuentes de respaldo si ese servicio no está disponible. Los gráficos son locales.
 
-6. **⚡ Carga Ultra Rápida (Cero Dependencias Pesadas)**:
-   - HTML5 semántico puro, CSS3 modular nativo y JavaScript (ES6+).
-   - Listo para desplegar instantáneamente en **GitHub Pages**.
+## Publicación
 
----
+El sitio es compatible con GitHub Pages y otros alojamientos estáticos, incluido Render. Publica la raíz del repositorio. No necesita un comando de construcción.
 
-## 🛠️ Guía de Publicación en GitHub Pages
+Para GitHub Pages, selecciona la rama que contiene el sitio y la carpeta raíz en la configuración de Pages. Los enlaces a CSS, JavaScript y favicon son relativos para admitir el subdirectorio del repositorio.
 
-1. **Descarga y Descompresión**:
-   - Extrae los archivos de `PAGINA-WEB-BETA-MEJORADA.zip`.
-2. **Copia los Archivos**:
-   - Copia `index.html`, las carpetas `css/` y `js/`, así como las imágenes/favicons en la raíz de tu repositorio en GitHub.
-3. **Sube los Cambios**:
-   ```bash
-   git add .
-   git commit -m "Mejora total del portafolio: Glassmorphism, CLI Terminal y filtro de proyectos"
-   git push origin main
-   ```
-4. **Activa GitHub Pages**:
-   - En GitHub, ve a **Settings > Pages**.
-   - En **Source**, selecciona **Deploy from a branch** -> rama `main` (raíz `/`) y haz clic en **Save**.
+## Contacto
+
+Destinatario: **paulo.escobar.dev@gmail.com**.
+
+El formulario conserva la integración con **FormSubmit**. La entrega depende del servicio y de la activación del destinatario; la primera solicitud puede requerir confirmar un correo enviado por FormSubmit. El enlace de correo funciona de manera independiente.
+
+En un alojamiento público, JavaScript configura el retorno al mismo dominio y ruta después del formulario. Como respaldo sin JavaScript, se conserva la dirección de Render existente. El botón se restablece al volver atrás con el navegador. Se incluye un campo señuelo contra bots.
+
+## Validación del rediseño
+
+Se verificaron filtros, contadores, diálogos, cierre con Escape, devolución del foco, menú móvil, copia del correo y validación del formulario sin enviar mensajes reales. También se revisaron anchos de 320 a 1920 px y accesibilidad automática con axe.
+
+La auditoría automática complementa la revisión visual; no equivale a una certificación de accesibilidad.
